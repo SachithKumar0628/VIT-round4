@@ -1,0 +1,239 @@
+.report-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.kpi-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all var(--transition-base);
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.kpi-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    line-height: 1.2;
+}
+
+.kpi-label {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    font-weight: 600;
+}
+
+/* Report Grid */
+.report-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.report-card {
+    padding: 24px;
+}
+
+.report-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 18px;
+}
+
+/* Category Bars */
+.category-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cat-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cat-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    min-width: 120px;
+}
+
+.cat-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.cat-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-400), var(--primary-600));
+    border-radius: var(--radius-full);
+}
+
+.cat-count {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--gray-800);
+    min-width: 24px;
+    text-align: right;
+}
+
+/* Fuel Donut */
+.fuel-donut {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.fuel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.fuel-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.fuel-item strong {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--gray-800);
+}
+
+.fuel-item span {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.fuel-pct {
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    color: var(--gray-400) !important;
+}
+
+/* Task Summary */
+.task-summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.ts-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px;
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+}
+
+.ts-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.ts-item span {
+    flex: 1;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+}
+
+.ts-item strong {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--gray-800);
+}
+
+/* History */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.history-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-50);
+}
+
+.history-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-500);
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.history-info strong {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--gray-800);
+}
+
+.history-info span {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    display: block;
+}
+
+.history-time {
+    font-size: 0.7rem !important;
+    color: var(--gray-300) !important;
+    margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+    .report-kpis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+}

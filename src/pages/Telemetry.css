@@ -1,0 +1,346 @@
+.telemetry-page {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.tele-live-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    animation: pulse 2s infinite;
+}
+
+.tele-fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.tele-fleet-card {
+    background: var(--surface-card);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    cursor: pointer;
+    box-shadow: var(--shadow-xs);
+    border: 2px solid transparent;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.tele-fleet-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.tele-fleet-card.active {
+    border-color: var(--primary-400);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.tele-fleet-card.locked {
+    border-left: 4px solid var(--danger-500);
+}
+
+.tele-fleet-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.tele-fleet-id {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+.tele-lock-icon {
+    color: var(--danger-500);
+}
+
+.tele-fleet-score {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-top: 4px;
+}
+
+.tele-fleet-alert {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--danger-500);
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.tele-health-bar {
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.tele-health-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+}
+
+.tele-detail-panel {
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    margin-bottom: 24px;
+}
+
+.tele-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.tele-detail-header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.tele-detail-type {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+}
+
+.tele-detail-health {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tele-health-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--gray-900);
+}
+
+.tele-health-label {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
+.tele-gauges-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.tele-gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+}
+
+.tele-gauge-svg {
+    width: 100px;
+    height: 100px;
+}
+
+.tele-gauge-center {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.tele-gauge {
+    position: relative;
+}
+
+.tele-gauge-center {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tele-gauge-value {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    line-height: 1;
+}
+
+.tele-gauge-unit {
+    font-size: 0.65rem;
+    color: var(--gray-500);
+}
+
+.tele-gauge-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-top: 6px;
+    text-align: center;
+}
+
+.tele-anomaly-section {
+    background: var(--danger-50);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.tele-anomaly-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--danger-600);
+    margin-bottom: 10px;
+}
+
+.tele-anomaly-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tele-anomaly-tag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: white;
+    color: var(--danger-600);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--danger-400);
+    text-transform: capitalize;
+}
+
+.tele-controls {
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    padding: 16px;
+}
+
+.tele-controls h3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin-bottom: 12px;
+}
+
+.tele-inject-btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tele-inject-btn {
+    text-transform: capitalize;
+}
+
+.tele-unlock-btn {
+    margin-top: 12px;
+}
+
+.tele-alerts-section {
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.tele-alerts-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 14px;
+}
+
+.tele-alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.tele-alert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+}
+
+.tele-alert-item strong {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.tele-alert-item span {
+    color: var(--gray-600);
+}
+
+.alert-critical {
+    background: var(--danger-50);
+    color: var(--danger-600);
+}
+
+.alert-warning {
+    background: var(--warning-50);
+    color: var(--warning-600);
+}
+
+@media (max-width: 768px) {
+    .tele-fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tele-gauges-row {
+        gap: 12px;
+    }
+
+    .tele-gauge {
+        width: 100px;
+    }
+}

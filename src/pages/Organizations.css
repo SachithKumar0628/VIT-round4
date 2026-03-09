@@ -1,0 +1,191 @@
+.orgs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.org-card {
+    padding: 24px;
+}
+
+.org-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.org-card-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--org-color) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.org-card-header h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--gray-800);
+}
+
+.org-type-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.org-card-desc {
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.org-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.org-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    color: var(--gray-500);
+}
+
+.org-stat-item strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--gray-800);
+    line-height: 1.1;
+}
+
+.org-stat-item span {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.org-vehicles-preview h4 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+}
+
+.org-vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.org-vehicle-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    background: var(--gray-50);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.org-v-status.available {
+    color: #10b981;
+}
+
+.org-v-status.in-transit {
+    color: #3b82f6;
+}
+
+.org-v-status.maintenance {
+    color: #f59e0b;
+}
+
+.org-card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--gray-100);
+    font-size: 0.7rem;
+    color: var(--gray-400);
+}
+
+.org-id {
+    font-family: monospace;
+    padding: 1px 6px;
+    background: var(--gray-50);
+    border-radius: var(--radius-sm);
+}
+
+/* Visibility Card */
+.visibility-card {
+    padding: 24px;
+}
+
+.visibility-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.visibility-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+.visibility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.visibility-rule {
+    padding: 16px;
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+}
+
+.vr-role {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 6px;
+}
+
+.vr-desc {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .org-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .visibility-grid {
+        grid-template-columns: 1fr;
+    }
+}
